@@ -28,6 +28,7 @@
   --secondary-gold: #CAB361;
   --secondary-orange: #BE6C49;
   --white: #FFFFFF;
+  --hover-red: #D46C5E;
 
   /* Font Size */
   --font-size-xs: 0.75rem;
@@ -52,6 +53,10 @@
 
 body, html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--beige-100);
 }
 
 button {
@@ -109,50 +114,43 @@ input, button, textarea, select {
 @layer utilities {
   .text-1 {
     font-size: var(--font-size-xl);
-    font-weight: bold;
+    font-weight: 700;
     line-height: var(--line-height-120);
-    letter-spacing: 0px;
   }
 
   .text-2 {
     font-size: var(--font-size-lg);
-    font-weight: bold;
+    font-weight: 700;
     line-height: var(--line-height-120);
-    letter-spacing: 0px;
   }
 
   .text-3 {
     font-size: var(--font-size-base);
-    font-weight: bold;
+    font-weight: 700;
     line-height: var(--line-height-150);
-    letter-spacing: 0px;
   }
 
   .text-4 {
     font-size: var(--font-size-sm);
     font-weight: 400;
     line-height: var(--line-height-150);
-    letter-spacing: 0px;
   }
 
   .text-4-bold {
     font-size: var(--font-size-sm);
-    font-weight: bold;
+    font-weight: 700;
     line-height: var(--line-height-150);
-    letter-spacing: 0px;
   }
 
   .text-5 {
     font-size: var(--font-size-xs);
     font-weight: 400;
     line-height: var(--line-height-150);
-    letter-spacing: 0px;
   }
 
   .text-5-bold {
     font-size: var(--font-size-xs);
-    font-weight: bold;
+    font-weight: 700;
     line-height: var(--line-height-150);
-    letter-spacing: 0px;
   }
 }

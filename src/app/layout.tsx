@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import Sidebar from '@/components/layout/Sidebar'
-import MobileNav from '@/components/layout/MobileNav'
+import BottomNavigation from '@/components/layout/BottomNavigation'
 import {Public_Sans} from 'next/font/google'
 
 
@@ -20,18 +20,19 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     return (
         <html lang="en">
         <body className={`${sans.variable} font-sans`}>
-        <div className='flex'>
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+        <div className="flex flex-col lg:flex-row min-h-screen">
             {/* Desktop Sidebar */}
-            <aside className='hidden lg:block basis-[300px] text-preset-1'>
+            <aside className="hidden xl:block h-dvh shrink-0">
                 <Sidebar/>
             </aside>
             {/* Main Content */}
-            <main className="max-w-[1440px] mx-auto p-6 basis-full lg:basis-auto lg:grow">
+            <main className="w-full max-w-[1440px] mx-auto px-4 md:px-10 pt-8 pb-20 md:pb-32 xl:pb-8 xl:h-dvh">
                 {children}
             </main>
             {/* Mobile Navigation */}
-            <nav className='block lg:hidden basis-full'>
-                <MobileNav/>
+            <nav className="block xl:hidden basis-full w-full fixed bottom-0">
+                <BottomNavigation/>
             </nav>
         </div>
         </body>

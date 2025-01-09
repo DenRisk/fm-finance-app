@@ -1,10 +1,9 @@
+import Heading from '@/components/common/Heading'
 
 const BillsPage = () => {
     return (
         <section>
-            <h1>Bills</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+            <Heading text='Recurring Bills'/>
         </section>
     );
 }
