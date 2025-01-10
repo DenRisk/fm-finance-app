@@ -94,6 +94,7 @@ img, picture, svg, video, canvas {
 
 input, button, textarea, select {
   font: inherit;
+  outline: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

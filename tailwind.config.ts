@@ -10,6 +10,7 @@ export default {
         extend: {
             boxShadow: {
                 'overlap': '-10px 0px 0px 0px var(--beige-100)',
+                'dropdown': '0px 4px 24px rgba(0, 0, 0, 0.25)',
             },
             gridTemplateRows: {
                 '3-minmax': 'minmax(0, 0.6fr) minmax(0, 0.55fr) minmax(0, 0.9fr)',
