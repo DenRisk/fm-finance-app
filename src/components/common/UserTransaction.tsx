@@ -30,7 +30,9 @@ const UserTransaction = ({mode, image, name, date, amount, category}: UserTransa
                     </div>
                     <p className='text-4-bold'>{name}</p>
                 </div>
-                <p className='text-5 text-grey-500'>{category}</p>
+                {
+                    category && <p className='text-5 text-grey-500'>{category}</p>
+                }
                 <p className='text-5 text-grey-500'>{date}</p>
                 <p className={`text-4-bold text-grey-500 text-right ${amount[0] === '+' ? 'text-primary-green' : 'text-grey-900'}`}>{amount}</p>
             </div>
@@ -38,16 +40,18 @@ const UserTransaction = ({mode, image, name, date, amount, category}: UserTransa
     }
 
     return (
-        <div className='flex items-center gap-x-4 w-full py-5'>
+        <div className='flex items-center gap-x-4 w-full py-3'>
             <div className='rounded-full overflow-clip'>
                 <Image src={image.url} alt={image.alt} width={40} height={40}/>
             </div>
             <div className='grow flex flex-col gap-y-2'>
                 <p className='text-4-bold grow'>{name}</p>
-                <p className='text-5 text-grey-500'>{category}</p>
+                {
+                    category && <p className='text-5 text-grey-500'>{category}</p>
+                }
             </div>
             <div>
-                <p className={`text-4-bold text-grey-500 mb-2 ${amount[0] === '+' ? 'text-primary-green' : 'text-grey-900'}`}>
+                <p className={`text-4-bold text-grey-500 mb-1 ${amount[0] === '+' ? 'text-primary-green' : 'text-grey-900'}`}>
                     {amount}
                 </p>
                 <p className='text-5 text-grey-500'>{date}</p>

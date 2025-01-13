@@ -3,7 +3,7 @@
 import React, {useState} from 'react';
 import Icon, {IconIds} from '@/components/common/Icon'
 
-type DropDownOption = {
+export type DropDownOption = {
     id: string
     label: string,
 }
