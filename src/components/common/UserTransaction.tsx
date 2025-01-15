@@ -34,7 +34,7 @@ const UserTransaction = ({mode, image, name, date, amount, category}: UserTransa
                     category && <p className='text-5 text-grey-500'>{category}</p>
                 }
                 <p className='text-5 text-grey-500'>{date}</p>
-                <p className={`text-4-bold text-grey-500 text-right ${amount[0] === '+' ? 'text-primary-green' : 'text-grey-900'}`}>{amount}</p>
+                <p className={`text-4-bold text-grey-500 text-right ${amount[0] === '-' ? 'text-grey-900' : 'text-primary-green'}`}>{amount}</p>
             </div>
         )
     }
@@ -51,7 +51,7 @@ const UserTransaction = ({mode, image, name, date, amount, category}: UserTransa
                 }
             </div>
             <div>
-                <p className={`text-4-bold text-grey-500 mb-1 ${amount[0] === '+' ? 'text-primary-green' : 'text-grey-900'}`}>
+                <p className={`text-4-bold text-grey-500 mb-1 ${amount[0] === '-' ? 'text-grey-900' : 'text-primary-green'}`}>
                     {amount}
                 </p>
                 <p className='text-5 text-grey-500'>{date}</p>

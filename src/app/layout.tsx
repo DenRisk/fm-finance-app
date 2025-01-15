@@ -3,6 +3,7 @@ import "./globals.css";
 import Sidebar from '@/components/layout/Sidebar'
 import BottomNavigation from '@/components/layout/BottomNavigation'
 import {Public_Sans} from 'next/font/google'
+import ReactQueryProvider from '../util/ReactQueryProvider'
 
 
 export const metadata: Metadata = {
@@ -28,7 +29,9 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
             </aside>
             {/* Main Content */}
             <main className="w-full max-w-[1440px] mx-auto px-4 md:px-10 pt-8 pb-20 md:pb-32 xl:pb-8 xl:h-dvh">
-                {children}
+                <ReactQueryProvider>
+                    {children}
+                </ReactQueryProvider>
             </main>
             {/* Mobile Navigation */}
             <nav className="block xl:hidden basis-full w-full fixed bottom-0">

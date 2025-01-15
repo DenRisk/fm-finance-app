@@ -15,6 +15,31 @@ export default {
             gridTemplateRows: {
                 '3-minmax': 'minmax(0, 0.6fr) minmax(0, 0.55fr) minmax(0, 0.9fr)',
             },
+            keyframes: {
+                textLoader: {
+                    '0%': {
+                        boxShadow: '20px 0 rgba(255, 255, 255, 0), 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0)',
+                    },
+                    '20%': {
+                        boxShadow: '20px 0 currentColor, 40px 0 rgba(255, 255, 255, 0), 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0)',
+                    },
+                    '40%': {
+                        boxShadow: '20px 0 currentColor, 40px 0 currentColor, 60px 0 rgba(255, 255, 255, 0), 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0)',
+                    },
+                    '60%': {
+                        boxShadow: '20px 0 currentColor, 40px 0 currentColor, 60px 0 currentColor, 80px 0 rgba(255, 255, 255, 0), 100px 0 rgba(255, 255, 255, 0)',
+                    },
+                    '80%': {
+                        boxShadow: '20px 0 currentColor, 40px 0 currentColor, 60px 0 currentColor, 80px 0 currentColor, 100px 0 rgba(255, 255, 255, 0)',
+                    },
+                    '100%': {
+                        boxShadow: '20px 0 currentColor, 40px 0 currentColor, 60px 0 currentColor, 80px 0 currentColor, 100px 0 currentColor',
+                    },
+                },
+            },
+            animation: {
+                textLoader: 'textLoader 1s linear infinite alternate',
+            },
         },
         fontFamily: {
             sans: ['var(--font-sans)'],

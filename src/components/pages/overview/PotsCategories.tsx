@@ -1,13 +1,21 @@
 import React from 'react';
 import CategoryTracker from '@/components/common/CategoryTracker'
+import {Pot} from '../../../types/data'
+import {formatCurrency} from '../../../util/helper'
 
-const PotsCategories = () => {
+
+type PotsCategoriesProps = {
+    categories: Pot[] | undefined;
+}
+
+const PotsCategories = ({categories}: PotsCategoriesProps) => {
     return (
         <div className='grid grid-cols-2 gap-4'>
-            <CategoryTracker category='Savings' value='$159' color='#277C78'/>
-            <CategoryTracker category='Gift' value='$40' color='#82C9D7'/>
-            <CategoryTracker category='Concert Ticket' value='$110' color='#626070'/>
-            <CategoryTracker category='New Laptop' value='$10' color='#F2CDAC'/>
+            {
+                categories?.map((category) => (
+                    <CategoryTracker key={category.name} category={category.name} value={formatCurrency(category.total)} color={category.theme}/>
+                ))
+            }
         </div>
     );
 };
